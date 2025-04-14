@@ -57,13 +57,13 @@ const SignInPage = () => {
                   <Clerk.Field name="identifier" className="flex flex-col gap-2">
                      <Clerk.Input
                         placeholder="john@gmail.com"
-                        className="py-2 px-6 rounded-full text-black bg-white w-72 placeholder:text-sm ring-0"
+                        className="py-2 px-6 rounded-full text-black bg-white w-72 focus:outline-none focus:ring-iconBlue focus:ring-2"
                      />
                      <Clerk.FieldError className="text-red-300 text-sm" />
                   </Clerk.Field>
                   <SignIn.Action
                      submit
-                     className="mt-2 text-sm underline w-72 text-center text-iconBlue bg-white"
+                     className="mt-4 py-2 px-6 rounded-full text-black w-72 text-center bg-white"
                   >
                      Continue
                   </SignIn.Action>
@@ -80,7 +80,7 @@ const SignInPage = () => {
                      <div className="flex flex-col gap-2">
                         <SignIn.Action
                            submit
-                           className="mt-2 text-sm underline w-72 text-center bg-white text-iconBlue"
+                           className="mt-2 py-2 px-6 rounded-full underline w-72 text-center bg-white text-iconBlue"
                         >
                            Continue
                         </SignIn.Action>

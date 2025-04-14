@@ -54,24 +54,17 @@ const SignUpPage = () => {
                      Sign up with Apple
                   </Clerk.Connection>
                   <div className="flex flex-col gap-4">
-                     Sign up with Credentials
-                     <Clerk.Field name="username" className="flex flex-col gap-2">
-                        <Clerk.Input
-                           className="py-2 px-6 rounded-full text-black w-72 placeholder:text-sm"
-                           placeholder="Username"
-                        />
-                        <Clerk.FieldError className="text-red-300 text-sm" />
-                     </Clerk.Field>
+                     <p className="text-xl">Sign up with Credentials</p>
                      <Clerk.Field name="emailAddress" className="flex flex-col gap-2">
                         <Clerk.Input
-                           className="py-2 px-6 rounded-full text-black w-72 placeholder:text-sm"
+                           className="py-2 px-6 rounded-full bg-white text-black w-72 focus:outline-none focus:ring-iconBlue focus:ring-2"
                            placeholder="E-mail"
                         />
                         <Clerk.FieldError className="text-red-300 text-sm" />
                      </Clerk.Field>
                      <Clerk.Field name="password" className="flex flex-col gap-2">
                         <Clerk.Input
-                           className="py-2 px-6 rounded-full text-black w-72 placeholder:text-sm"
+                           className="py-2 px-6 rounded-full bg-white text-black w-72 focus:outline-none focus:ring-iconBlue focus:ring-2"
                            placeholder="Password"
                         />
                         <Clerk.FieldError className="text-red-300 text-sm" />
@@ -79,7 +72,7 @@ const SignUpPage = () => {
                      <SignUp.Captcha />
                      <SignUp.Action
                         submit
-                        className="bg-iconBlue rounded-full p-2 text-white font-bold w-72 text-center "
+                        className="bg-white rounded-full p-2 text-black font-bold w-72 text-center "
                      >
                         Sign up
                      </SignUp.Action>
@@ -100,15 +93,18 @@ const SignUpPage = () => {
                </SignUp.Step>
                <SignUp.Step name="verifications">
                   <SignUp.Strategy name="email_code">
-                     <h1 className="text-sm mb-2">Check your e-mail</h1>
+                     <h1 className="text-xl mb-2">Check your e-mail</h1>
                      <Clerk.Field name="code" className="flex flex-col gap-4">
                         <Clerk.Input
                            placeholder="Verification code"
-                           className="py-2 px-6 rounded-full text-black w-72 placeholder:text-sm"
+                           className="py-2 px-6 rounded-full bg-white text-black w-72 focus:outline-none focus:ring-iconBlue focus:ring-2"
                         />
                         <Clerk.FieldError className="text-red-300 text-sm" />
                      </Clerk.Field>
-                     <SignUp.Action submit className="mt-2 underline text-iconBlue text-sm">
+                     <SignUp.Action
+                        submit
+                        className="mt-4 py-2 px-6 rounded-full text-black w-72 text-center bg-white"
+                     >
                         Verify
                      </SignUp.Action>
                   </SignUp.Strategy>
