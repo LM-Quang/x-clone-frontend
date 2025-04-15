@@ -3,7 +3,7 @@
 import { IKImage } from "imagekitio-next";
 
 type ImageType = {
-   path: string;
+   path: string | undefined;
    w?: number;
    h?: number;
    alt: string;
